@@ -22,8 +22,8 @@
 	values of lowercase and uppercase
 */
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
 int	ft_toupper(int i)
 {
@@ -34,31 +34,31 @@ int	ft_toupper(int i)
 	return (i);
 }
 
-int	main(void)
-{
-	char test = 'a';
+// int	main(void)
+// {
+// 	char test = 'a';
     
-    char result = ft_toupper(test);
+//     char result = ft_toupper(test);
       
-	printf("ft_toupper: ");
-	if (ft_toupper(result))
-	{
-		printf("%c\n", result);
-	}
-	else
-	{
-		printf("%c\n", result);
-	}
+// 	printf("ft_toupper: ");
+// 	if (ft_toupper(result))
+// 	{
+// 		printf("%c\n", result);
+// 	}
+// 	else
+// 	{
+// 		printf("%c\n", result);
+// 	}
 
-	printf("toupper   : ");
-	if (toupper(result))
-	{
-		printf("%c\n", result);
-	}
-	else
-	{
-		printf("%c\n", result);
-	}
+// 	printf("toupper   : ");
+// 	if (toupper(result))
+// 	{
+// 		printf("%c\n", result);
+// 	}
+// 	else
+// 	{
+// 		printf("%c\n", result);
+// 	}
 
-	return (0);
-}
+// 	return (0);
+// }

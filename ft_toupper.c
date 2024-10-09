@@ -14,7 +14,6 @@
 	toupper is a function from <ctype.h>
 	It converts character to uppercase
 
-
 	Lowercase letters ('a' to 'z') have ASCII values ranging from 97 to 122
 	Uppercase letters ('A' to 'Z') have ASCII values ranging from 65 to 90
 

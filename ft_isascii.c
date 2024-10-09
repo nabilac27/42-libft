@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 /*
-	isalpha is a function from <ctype.h>
-	It checks if a character is an ASCII character
+    isascii is a function from <ctype.h>
+    It checks if a character is an ASCII character
 
     ASCII (American Standard Code for Information Interchange) 
     is a character encoding standard used for representing text 

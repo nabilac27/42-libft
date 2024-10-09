@@ -11,16 +11,16 @@
 /* ************************************************************************** */
 
 /*
-	isprint is a function from <ctype.h>
-	It checks if a character is printable
+    isprint is a function from <ctype.h>
+    It checks if a character is printable
 
     The printable standard defines 128 characters
     
     Control characters (0-31):
-        Non-printing characters used for control purposes 
-        (e.g., carriage return, line feed, tab)
+    Non-printing characters used for control purposes 
+    (e.g., carriage return, line feed, tab)
     Printable characters (32-126):
-        Include letters, digits, punctuation marks, and special symbols
+    Include letters, digits, punctuation marks, and special symbols
 */
 
 // #include <ctype.h>

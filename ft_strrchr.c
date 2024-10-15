@@ -12,7 +12,7 @@
 
 /*
     strchr is a function from <string.h>
-	It searches for the last occurrence of a character in a string
+    It searches for the last occurrence of a character in a string
 */
 
 #include "libft.h"

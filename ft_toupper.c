@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:46:21 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/08 12:54:57 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/10 22:31:50 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@
 	values of lowercase and uppercase
 */
 
-// #include <ctype.h>
-// #include <stdio.h>
+#include "libft.h"
 
 int	ft_toupper(int i)
 {
@@ -30,12 +29,15 @@ int	ft_toupper(int i)
     {
         return (i - 32);
     }
-	return (i);
+	else
+	{
+		return (i);
+	}
 }
 
 // int	main(void)
 // {
-// 	char test = 'a';
+// 	char test = 'z';
     
 //     char result = ft_toupper(test);
       

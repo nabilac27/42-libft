@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:15:38 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/08 12:20:30 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/10 20:04:18 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,18 @@
 	It checks if a character is a digit
 */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int i)
 {
-	while ('0' <= i && i <= '9')
+	if ('0' <= i && i <= '9')
 	{
 		return (1);
 	}
+	else
+	{
 		return (0);
+	}
 }
 
 // int	main(void)

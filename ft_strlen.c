@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:54:23 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/08 21:02:21 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/10 20:04:38 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 	It calculates the length of a string
 */
 
-// #include <stdio.h>
-// #include <string.h>
+#include "libft.h"
 
 int	ft_strlen(char str[])
 {
-	int i;
+	int i = 0;
 
-	i = 0;
-	while (str[i])
+	while (str[i] != '\0')
     {
         i++;
     }
@@ -32,7 +30,7 @@ int	ft_strlen(char str[])
 
 // int main(void)
 // {
-//     char test[] = "this is 9";
+//     char test[] = "this is 10";
 //     printf("%d\n", ft_strlen(test));
 //     return(0);
 // }

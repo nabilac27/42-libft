@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:15:29 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/08 12:15:32 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/10 20:03:53 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 	It checks if a character is alphabetic
 */
 
-// #include <ctype.h>
-// #include <stdio.h>
+#include "libft.h"
 
 int	ft_isalpha(int i)
 {

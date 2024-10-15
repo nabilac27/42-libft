@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:20:41 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/08 12:30:36 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/10 20:03:48 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,12 @@
 	alphanumeric = contains letters (a-z, A-Z, 0-9) and numbers
 */
 
-// #include <ctype.h>
-// #include <stdio.h>
+#include "libft.h"
 
 int	ft_isalnum(int i)
 {
-	if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z') || (i >= '0'
-			&& i <= '9'))
+	if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z') 
+		|| (i >= '0' && i <= '9'))
 	{
 		return (1);
 	}
@@ -35,7 +34,7 @@ int	ft_isalnum(int i)
 
 // int	main(void)
 // {
-// 	char test = '/';
+// 	char test = '#';
 
 // 	printf("ft_isalnum: ");
 // 	if (ft_isalnum(test))

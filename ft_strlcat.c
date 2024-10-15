@@ -12,7 +12,7 @@
 
 /*
     strlcat is a function from <string.h>
-	It used to concatenate string to an specific size
+    It used to concatenate string to an specific size
 */
 
 #include "libft.h"

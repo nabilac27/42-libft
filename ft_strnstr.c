@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:37:07 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/10 20:04:42 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/17 16:06:20 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,13 @@ char	*ft_strnstr(const char *str, const char *substr, size_t n)
 
 // int	main(void)
 // {
-// 	char str[]	  = "This is a test string";
+// 	char str[]		= "This is a test string";
 // 	char substr[] = "test";
-// 	size_t n 	  = 25; // Input, limit the search to the first n characters.
+// 	size_t n 		= 25; // Input, limit the search to the first n characters.
 
 // 	char *result_ft_strnstr = ft_strnstr(str, substr, n);
 // 	char *result_strnstr	= strnstr(str, substr, n);
-	
+
 // 	if (result_ft_strnstr != 0)
 // 	{
 // 		printf("ft_strnstr: %s\n", result_ft_strnstr);
@@ -66,11 +66,11 @@ char	*ft_strnstr(const char *str, const char *substr, size_t n)
 
 // 	if (result_strnstr != 0)
 // 	{
-// 		printf("strnstr	  : %s\n", result_strnstr);
+// 		printf("strnstr		: %s\n", result_strnstr);
 // 	}
 // 	else
 // 	{
-// 		printf("strnstr	  : Substring not found.\n");
+// 		printf("strnstr		: Substring not found.\n");
 // 	}
 
 // 	return (0);

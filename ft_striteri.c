@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 20:54:23 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/17 17:10:27 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/17 17:28:34 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/17 18:13:23 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	strlen is a function from <string.h>
-	It calculates the length of a string
-*/
+/* applies a function to each character of a string */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	i;
+	unsigned int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	if (!s)
+		return ;
+	while (s[i])
 	{
-		i++;
+		(*f)(i, (s + i));
+		++i;
 	}
-	return (i);
 }
-
-// int main(void)
+// void	function(unsigned int i, char *c)
 // {
-//     char test[] = "this is 10";
-//     printf("%d\n", ft_strlen(test));
-//     return(0);
+// 	*c += i;
+// }
+// int	main(void)
+// {
+// 	char	str[] = "aaaaaa";
+
+// 	ft_striteri(str, &function);
+// 	printf("%s\n", str);
+// 	return (0);
 // }

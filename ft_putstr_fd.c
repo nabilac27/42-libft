@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 20:54:23 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/17 17:10:27 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/17 17:31:24 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/17 17:37:55 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	strlen is a function from <string.h>
-	It calculates the length of a string
-*/
+/* output a string to a file descriptor */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	write(fd, s, ft_strlen(s));
 }
 
-// int main(void)
+// int	main(void)
 // {
-//     char test[] = "this is 10";
-//     printf("%d\n", ft_strlen(test));
-//     return(0);
+// 	char	str[] = "Hello World!";
+// 	int		fd;
+
+// 	fd = 1;
+// 	ft_putstr_fd(str, fd);
+// 	return (0);
 // }

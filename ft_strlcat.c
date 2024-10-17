@@ -6,42 +6,33 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 21:36:54 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/15 00:47:01 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/17 17:51:25 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-    strlcat is a function from <string.h>
-    It used to concatenate string to an specific size
+	strlcat is a function from <string.h>
+	It used to concatenate string to an specific size
 */
-
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dst_len;
-	size_t	src_len;
 	size_t	i;
+	size_t	j;
 
-	dst_len = strlen(dst);
-	src_len = strlen(src);
 	i = 0;
-
-	if (dstsize <= dst_len)
-	{
-		return (dstsize + src_len);
-	}
-
-	while (src[i] != '\0' && dst_len + i < dstsize - 1)
-	{
-		dst[dst_len + i] = src[i];
+	j = 0;
+	while (dst[i] && i < size)
 		i++;
+	while (src[j] && (i + j + 1) < size)
+	{
+		dst[i + j] = src[j];
+		j++;
 	}
-
-	dst[dst_len + i] = '\0';
-	int total_len = dst_len + src_len;
-
-	return (total_len);
+	if (i < size)
+		dst[i + j] = '\0';
+	return (i + ft_strlen(src));
 }
 
 // int main(void)
@@ -54,11 +45,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 //     ret = ft_strlcat(dest1, src, 5);
 //     printf("ft_strlcat\n");
-//     printf("dest = %s\nreturn = %zu\n\n", dest1, ret);
+//     printf("dest = %s\nreturn (= %zu\n\n", dest1, ret));
 
 //     ret = strlcat(dest2, src, 5);
 //     printf("strlcat\n");
-//     printf("dest = %s\nreturn = %zu\n", dest2, ret);
+//     printf("dest = %s\nreturn (= %zu\n", dest2, ret));
 
-//     return 0;
+//     return (0);
 // }

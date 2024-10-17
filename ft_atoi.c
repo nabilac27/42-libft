@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   unfinished_ft_atoi.c                               :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:50:09 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/10 22:57:51 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/17 18:59:21 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,20 @@
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	int	negative;
+	int	minus;
 	int	result;
 
-	negative = 1;
+	minus = 1;
 	result = 0;
 	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v'
 		|| *str == '\f' || *str == '\r')
-	{
 		str++;
-	}
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-		{
-			negative = negative * -1;
-		}
+			minus *= -1;
 		str++;
 	}
 	while (*str >= '0' && *str <= '9')
@@ -43,31 +39,21 @@ int	ft_atoi(char *str)
 		result = result * 10 + *str - '0';
 		str++;
 	}
-	return (result * negative);
+	return (result * minus);
 }
 
-// int	main(void)
+// int main()
 // {
-// 	char test1[] = " ---+--+1234ab567";
-// 	char test2[] = " \n\r-12abb345";
-// 	char test3[] = "123 123";
-// 	char test4[] = "---123";
-
-// 	printf("test 1\n");
-// 	printf("ft_atoi : %d\n", ft_atoi(test1));
-// 	printf("atoi	: %d\n\n", atoi(test1));
-
-// 	printf("test 2\n");
-// 	printf("ft_atoi	: %d\n", ft_atoi(test2));
-// 	printf("atoi	: %d\n\n", atoi(test2));
-
-// 	printf("test 3\n");
-// 	printf("ft_atoi	: %d\n", ft_atoi(test3));
-// 	printf("atoi	: %d\n\n", atoi(test3));
-
-// 	printf("test 4\n");
-// 	printf("ft_atoi	: %d\n", ft_atoi(test4));
-// 	printf("atoi	: %d\n", atoi(test4));
-
-// 	return (0);
+// 	char str1[] = "15613";
+// 	char str2[] = "-15613";
+// 	char str3[] = "+15asd613";
+// 	char str4[] = "-1561dase3";
+// 	ft_putnbr_fd(ft_atoi(str1), 1);
+// 	ft_putchar_fd('\n', 1);
+// 	ft_putnbr_fd(ft_atoi(str2), 1);
+// 	ft_putchar_fd('\n', 1);
+// 	ft_putnbr_fd(ft_atoi(str3), 1);
+// 	ft_putchar_fd('\n', 1);
+// 	ft_putnbr_fd(ft_atoi(str4), 1);
+// 	ft_putchar_fd('\n', 1);
 // }

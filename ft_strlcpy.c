@@ -17,16 +17,20 @@
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t n)
+size_t	ft_strlcpy(char *restrict dest, const char *src, size_t n)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
 	while (src[i] != '\0')
+	{
 		i++;
+	}
 	if (n == 0)
+	{
 		return (i);
+	}
 	j = 0;
 	while (j < n - 1 && src[j] != '\0')
 	{
@@ -43,13 +47,16 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 // 	char dest1[20];
 // 	char dest2[20];
 
-// 	size_t n = 4; // Input: limit the copy to n characters
+// 	size_t n = strlen(src)+1;
+
+// 	printf("source		: %s\n", src);
+// 	printf("-------------------------\n");
 
 // 	size_t result_ft_strlcpy = ft_strlcpy(dest1, src, n);
-// 	size_t result_strlcpy = ft_strlcpy(dest2, src, n);
+// 	printf("ft_strlcpy	: %s\n", dest1);
 
-// 	printf("ft_strlcpy: %s\n", dest1);
-// 	printf("strlcpy	  : %s\n", dest2);
+// 	size_t result_strlcpy = ft_strlcpy(dest2, src, n);
+// 	printf("strlcpy		: %s\n", dest2);
 
 // 	return (0);
 // }

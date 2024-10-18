@@ -23,63 +23,65 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	void	*p_dest;
+	unsigned char		*ptr_dest;
+	const unsigned char	*ptr_src;
+	size_t				i;
 
-	p_dest = dest;
-	if (dest == 0 && src == 0)
-		return (0);
-	if (dest > src)
+	ptr_dest = (unsigned char *)dest;
+	ptr_src = (const unsigned char *)src;
+	if (!dest || !src)
 	{
-		while (len--)
-			*(char *)(dest + len) = *(unsigned char *)(src + len);
+		return (0);
+	}
+	if (ptr_dest > ptr_src)
+	{
+		i = len;
+		while (i > 0)
+		{
+			i--;
+			ptr_dest[i] = ptr_src[i];
+		}
 	}
 	else
 	{
-		while (len--)
-			*(unsigned char *)dest++ = *(unsigned char *)src++;
+		i = 0;
+		while (i < len)
+		{
+			ptr_dest[i] = ptr_src[i];
+			i++;
+		}
 	}
-	return (p_dest);
+	return (ptr_dest);
 }
 
 // int	main(void)
 // {
-//     char array1[20];
-//     char array2[20];
+// 	char str[50] 	= "Hello, World!";
+// 	size_t len_str  = strlen(str);
 
-//     // Test 1: Overlapping regions (copying forward)
-//     memset(array1, 0, sizeof(array1));
-//     strcpy(array1, "teststring");
-//     memmove(array1 + 2, array1, strlen("teststring") + 1); 
-//      +1 to include the null terminator
-//     printf("memmove   (forward): %s\n", array1);
+// 	printf("Input		: %s\n", str);
+// 	printf("-------------------------------\n");
 
-//     memset(array2, 0, sizeof(array2));
-//     strcpy(array2, "teststring");
-//     ft_memmove(array2 + 2, array2, strlen("teststring") + 1);
-//     printf("ft_memmove(forward): %s\n\n", array2);
+// 	// Overlapping memory regions
+// 	ft_memmove(str + 7, str, len_str);
+// 	printf("ft_memmove	: %s\n", str);
 
-//     // Test 2: Overlapping regions (copying backward)
-//     memset(array1, 0, sizeof(array1));
-//     strcpy(array1, "teststring");
-//     memmove(array1, array1 + 2, strlen("teststring") - 1);
-// 	Copy excluding first 2 characters
-//     printf("memmove   (backward): %s\n", array1);
+// 	// Reset the string for the next demonstration
+//     strcpy(str, "Hello, World!"); // Restore the original string
 
-//     memset(array2, 0, sizeof(array2));
-//     strcpy(array2, "teststring");
-//     ft_memmove(array2, array2 + 2, strlen("teststring") - 1);
-//     printf("ft_memmove(backward): %s\n\n", array2);
+// 	memmove(str + 7, str, len_str);
+// 	printf("memmove		: %s\n", str);
 
-//     // Test 3: Non-overlapping regions
-//     memset(array1, 0, sizeof(array1));
-//     strcpy(array1, "nonoverlap");
-//     memmove(array1 + 5, array1, strlen("nonoverlap") + 1);
-//     printf("memmove   (non-overlap): %s\n", array1);
-
-//     memset(array2, 0, sizeof(array2));
-//     strcpy(array2, "nonoverlap");
-//     ft_memmove(array2 + 5, array2, strlen("nonoverlap") + 1);
-//     printf("ft_memmove(non-overlap): %s\n\n", array2);
-
-//     return (0);
+// 	return (0);
 // }
+
+/*
+	The difference between memmove and memcpy
+
+	memmove:
+		Safely handles overlapping memory regions
+
+	memcpy:
+		Does not handle overlaps safely, which can lead to data corruption
+
+*/

@@ -12,39 +12,66 @@
 
 /*
 	memset is a function from <string.h>
-	memset stands for "memory set" 
+	memset stands for "memory set"
 	It sets a block of memory to a specific value
+
+	It is often utilized for initializing or resetting memory areas,
+	such as arrays or structures, to a known state.
 */
 
 #include "libft.h"
 
-void	*ft_memset(void *x, int c, size_t len)
+void	*ft_memset(void *ptr, int value, size_t num)
 {
-	size_t	i;
 	char	*string;
+	size_t	i;
 
-	string = (char *)x;
+	string = (char *)ptr;
 	i = 0;
-	while (i < len)
+	while (i < num)
 	{
-		string[i] = c;
+		string[i] = value;
 		i++;
 	}
-	return (x);
+	return (ptr);
 }
 
 // int	main(void)
 // {
-// 	char str[] = "Hello, World!";
-// 	size_t n = sizeof(str) - 1;
+// 	char	str[] = "Hello, World!";
+// 	size_t	size_str;
+// 	int		c;
 
-// 	int c = 'x';
+// 	size_str = sizeof(str) - 1;
+// 	c = 'A';
 
-// 	ft_memset(str, c, n);
-// 	printf("ft_memset: %s\n", str);
+// 	printf("Input		: %s\n", str);
+// 	printf("-------------------------------\n");
 
-// 	memset(str, c, n);
+// 	ft_memset(str, c, size_strn);
+// 	printf("ft_memset	: %s\n", str);
+
+// 	memset(str, c, size_strn);
 // 	printf("memset		: %s\n", str);
 
 // 	return (0);
 // }
+
+/* 
+	void* is a Generic Pointer Type:
+	It can point to any data type, but it does not have a specific data type
+	associated with it.
+
+	As such, you cannot directly dereference a void*
+	or perform pointer arithmetic on it because the compiler does not know
+	what type of data it points to.
+
+	To set each byte in memory to a specific value,
+	we need to treat the memory as an array of bytes.
+
+	In C, a char is defined to be exactly one byte,
+	so casting the void* pointer to a char* allows us to access and
+	modify individual bytes
+
+	Dereferencing: accessing the value that a pointer is pointing to
+*/

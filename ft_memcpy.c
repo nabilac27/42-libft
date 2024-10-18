@@ -18,19 +18,23 @@
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	char		*ptr_dest;
+	const char	*ptr_src;
+	size_t		i;
 
-	if (!dest && !src)
-		return (dest);
-	d = dest;
-	s = src;
-	while (n > 0)
+	ptr_dest = (char *)dest;
+	ptr_src = (const char *)src;
+	i = 0;
+	if (!dest || !src)
 	{
-		*d++ = *s++;
-		n--;
+		return (0);
+	}
+	while (i < n)
+	{
+		ptr_dest[i] = ptr_src[i];
+		i++;
 	}
 	return (dest);
 }
@@ -40,9 +44,23 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // 	char src[32] = "Hello World!";
 // 	char dest[32] = "Destination";
 
+// 	printf("Source		: %s\n", src);
+// 	printf("Destination	: %s\n", dest);
+// 	printf("-------------------------------\n");
+
 // 	ft_memcpy(dest, src, sizeof(src));
 // 	printf("ft_memcpy: \"%s\"\n", dest);
 
 // 	memcpy(dest, src, sizeof(src));
 // 	printf("memcpy   : \"%s\"\n", dest);
 // }
+
+/*
+	The difference between memcpy and strcpy
+
+	memcpy:
+	Copies a specified number of bytes from source to destination
+
+	strcpy:
+	Copies a null-terminated string from source to destination
+*/

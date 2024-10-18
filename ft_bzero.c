@@ -20,23 +20,31 @@
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_bzero(void *ptr, size_t n)
 {
-	while (n--)
-		*(unsigned char *)s++ = 0;
-}
+	char	*string;
+	size_t	i;
 
-// #include <stdio.h>
+	string = (char *)ptr, i = 0;
+	while (i < n)
+	{
+		string[i] = 0;
+		i++;
+	}
+}
 
 // int	main(void)
 // {
-// 	char str[] = "Hello, World!";
-// 	size_t n = sizeof(str);
+// 	char str[] 		= "Hello, World!";
+// 	size_t size_str = sizeof(str);
 
-// 	ft_bzero(str, n);
+// 	printf("Input	: %s\n", str);
+// 	printf("--------------------------\n");
+
+// 	ft_bzero(str, size_str);
 // 	printf("ft_bzero: %s\n", str);
 
-// 	bzero(str, n);
+// 	bzero(str, size_str);
 // 	printf("bzero   : %s\n", str);
 
 // 	return (0);

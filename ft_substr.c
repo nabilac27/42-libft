@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:19:39 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/18 19:04:11 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/19 19:46:26 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	j = start;
 	if (s == 0)
-		return (NULL);
+		return (0);
 	if (ft_strlen(s) < start)
 		return (ft_strdup(""));
 	if (len > (ft_strlen(s) - start))
@@ -49,3 +49,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // 	return (0);
 // }
+
+// /*
+// 	to compile:
+// 	cc ft_substr.c ft_strdup.c ft_strlen.c
+// */

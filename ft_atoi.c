@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:50:09 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/18 18:15:34 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/19 19:57:25 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 	atoi is a function from <stdlib.h>
 	It stands for ASCII to integer
 	It converts a string representing a number into an integer
+	It skips leading whitespace characters
 */
 
 #include "libft.h"
@@ -45,9 +46,31 @@ int	ft_atoi(const char *str)
 
 // int	main(void)
 // {
-// 	char str[] = "\t -15613abc";
+// 	char str[] = "\t -271abc";
 
 // 	printf("ft_atoi : %d\n", ft_atoi(str));
 // 	printf("atoi	: %d\n", atoi(str));
 // 	return (0);
 // }
+
+// /*
+// 	line 41
+// 	for example, num = 271
+// 	(str[0] - '0') + (res * 10)
+// 		('2' - '0')+ (0 * 10)
+// 		(50 - 48)  + (0 * 10)
+//  		2          + 0
+// 	= 2
+
+// 	ASCII table:
+// 	0	48
+// 	1	49
+// 	2	50
+// 	3	51
+// 	4	52
+// 	5	53
+// 	6	54
+// 	7	55
+// 	8	56
+// 	9	57
+// */

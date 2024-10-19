@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:12:55 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/18 23:21:24 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/19 05:22:41 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,20 @@
 
 char	*ft_strchr(const char *ptr_string, int ptr_find)
 {
-	int	i;
+	int		i;
+	char	char_ptr_find;
 
 	i = 0;
-	while (ptr_string[i] != '\0')
+	char_ptr_find = (char)ptr_find;
+	while (ptr_string[i] != '\0' || ptr_string[i] == char_ptr_find)
 	{
-		if (ptr_string[i] == (char)ptr_find)
+		if (ptr_string[i] == char_ptr_find)
+		{
 			return ((char *)&ptr_string[i]);
+		}
 		i++;
 	}
-	if (ptr_find == '\0')
+	if (char_ptr_find == '\0')
 		return ((char *)&ptr_string[i]);
 	return (0);
 }
@@ -41,7 +45,7 @@ char	*ft_strchr(const char *ptr_string, int ptr_find)
 
 // 	char find = 'i'; // Input
 
-// 	printf("String	  = %s\n", string);
+// 	printf("String		= %s\n", string);
 // 	printf("To find   = %c\n", find);
 // 	printf("---------------------------\n");
 

@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:14:54 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/18 15:49:50 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/19 05:16:05 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,46 @@
 	It searches for the last occurrence of a character in a string
 */
 
+// char	*ft_strrchr(const char *ptr_string, int ptr_find)
+// {
+// 	int		i;
+// 	char	*last;
+
+// 	i = 0;
+// 	last = 0;
+// 	while (ptr_string[i] != '\0')
+// 	{
+// 		if (ptr_string[i] == (char)ptr_find)
+// 			last = (char *)&ptr_string[i];
+// 		i++;
+// 	}
+// 	if (ptr_find == '\0')
+// 		return ((char *)&ptr_string[i]);
+// 	return (last);
+// }
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *ptr_string, int ptr_find)
 {
 	int		i;
-	char	*last;
+	int		last;
+	char	c2;
 
 	i = 0;
-	last = 0;
+	last = -1;
+	c2 = (char)ptr_find;
 	while (ptr_string[i] != '\0')
 	{
-		if (ptr_string[i] == (char)ptr_find)
-			last = (char *)&ptr_string[i];
+		if (ptr_string[i] == c2)
+			last = i;
 		i++;
 	}
-	if (ptr_find == '\0')
+	if (c2 == '\0')
 		return ((char *)&ptr_string[i]);
-	return (last);
+	if (last != -1)
+		return ((char *)&ptr_string[last]);
+	return (NULL);
 }
 
 // int	main(void)

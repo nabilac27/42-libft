@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:52:43 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/18 17:37:30 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/19 19:43:06 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,13 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr_malloc;
-	size_t	n;
 
-	n = count * size;
-	ptr_malloc = malloc(n);
-	if (!ptr_malloc)
+	ptr_malloc = malloc(count * size);
+	if (ptr_malloc == 0)
 	{
 		return (0);
 	}
-	ft_bzero(ptr_malloc, n);
+	ft_bzero(ptr_malloc, count * size);
 	return (ptr_malloc);
 }
 
@@ -59,3 +57,8 @@ void	*ft_calloc(size_t count, size_t size)
 // 	free(str);
 // 	return (0);
 // }
+
+// /*
+// 	to compile:
+// 	cc -Wall -Wextra -Werror ft_calloc.c ft_bzero.c
+// */

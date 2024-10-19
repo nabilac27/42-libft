@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 21:36:54 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 04:58:52 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/19 19:46:02 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 
 // 	return (0);
 // }
+
+// /*
+// 	to compile:
+// 	cc ft_strlcat.c ft_strlen.c
+// */

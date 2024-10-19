@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:36:08 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/18 21:24:17 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/19 19:45:25 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,21 +57,24 @@ void	*ft_memset(void *ptr, int value, size_t num)
 // 	return (0);
 // }
 
-/*
-	void* is a Generic Pointer Type:
-	It can point to any data type, but it does not have a specific data type
-	associated with it.
+// /*
+// 	void* is a Generic Pointer Type:
+// 	It can point to any data type,
+// 	but it does not have a specific data type
+// 	associated with it
 
-	As such, you cannot directly dereference a void*
-	or perform pointer arithmetic on it because the compiler does not know
-	what type of data it points to.
+// 	a void* can't be dereferenced
+// 	or perform pointer arithmetic on it 
+// 	because the compiler does not know
+// 	what type of data it points to
 
-	To set each byte in memory to a specific value,
-	we need to treat the memory as an array of bytes.
+// 	To set each byte in memory to a specific value,
+// 	we need to treat the memory as an array of bytes
 
-	In C, a char is defined to be exactly one byte,
-	so casting the void* pointer to a char* allows us to access and
-	modify individual bytes
+// 	In C, a char is defined to be exactly one byte,
+// 	casting the void* pointer to a char* allows us 
+// 	to access and modify individual bytes
 
-	Dereferencing: accessing the value that a pointer is pointing to
-*/
+// 	Dereferencing:
+// 	accessing the value that a pointer is pointing to
+// */

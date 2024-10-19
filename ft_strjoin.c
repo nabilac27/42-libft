@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:21:09 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/18 20:12:15 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/19 19:45:57 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (new_str);
 }
 
-/* int	main(void)
-{
-	char str1[] = "Hello ";
-	char str2[] = "World!";
+// int	main(void)
+// {
+// 	char str1[] = "Hello ";
+// 	char str2[] = "World!";
 
-	printf("%s\n", ft_strjoin(str1, str2));
+// 	printf("%s\n", ft_strjoin(str1, str2));
 
-	return (0);
-} */
+// 	return (0);
+// }
+
+// /*
+// 	to compile:
+// 	cc ft_strjoin.c ft_strlcpy.c ft_strlen.c
+// */

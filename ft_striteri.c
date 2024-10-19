@@ -6,11 +6,15 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:28:34 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/17 18:13:23 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/19 21:21:49 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* applies a function to each character of a string */
+/*
+	ft_striteri function iterates over each character
+	in a string and applies a given function to each character,
+	passing the character's index and a pointer to the character itself
+*/
 
 #include "libft.h"
 
@@ -19,21 +23,20 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	unsigned int	i;
 
 	i = 0;
-	if (!s)
-		return ;
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		(*f)(i, (s + i));
-		++i;
+		f(i, &s[i]);
+		i++;
 	}
 }
 // void	function(unsigned int i, char *c)
 // {
-// 	*c += i;
+// 	c = c + i;
 // }
+
 // int	main(void)
 // {
-// 	char	str[] = "aaaaaa";
+// 	char str[] = "abcdef";
 
 // 	ft_striteri(str, &function);
 // 	printf("%s\n", str);

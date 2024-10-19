@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:34:51 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/18 16:23:09 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/19 20:56:11 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,30 +39,30 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 // int	main(void)
 // {
-// 	int a[4] = {4, 2, 5, 6};
-// 	int b[4] = {4, 2, 5, 6};
+// 	char a[10] = "hello";
+// 	char b[10] = "hel1o";
 
 // 	int res_ft_memcmp = ft_memcmp(a, b, sizeof(a));
 // 	printf("ft_memcmp: ");
-// 	if (res_ft_memcmp == 0)
-// 	{
-// 		printf("%d, both are equal\n\n", ft_memcmp(a, b, sizeof(a)));
-// 	}
-// 	else
-// 	{
-// 		printf("%d, both are not equal\n\n", ft_memcmp(a, b, sizeof(a)));
-// 	}
+// 	// if (res_ft_memcmp == 0)
+// 	// {
+// 	// 	printf("%d, both are equal\n\n", ft_memcmp(a, b, sizeof(a)));
+// 	// }
+// 	// else
+// 	// {
+// 	// 	printf("%d, both are not equal\n\n", ft_memcmp(a, b, sizeof(a)));
+// 	// }
 
-// 	int res_memcmp = memcmp(a, b, sizeof(a));
-// 	printf("memcmp		: ");
-// 	if (res_ft_memcmp == 0)
-// 	{
-// 		printf("%d, both are equal\n", ft_memcmp(a, b, sizeof(a)));
-// 	}
-// 	else
-// 	{
-// 		printf("%d, both are not equal\n", memcmp(a, b, sizeof(a)));
-// 	}
+// 	// int res_memcmp = memcmp(a, b, sizeof(a));
+// 	// printf("memcmp		: ");
+// 	// if (res_ft_memcmp == 0)
+// 	// {
+// 	// 	printf("%d, both are equal\n", ft_memcmp(a, b, sizeof(a)));
+// 	// }
+// 	// else
+// 	// {
+// 	// 	printf("%d, both are not equal\n", memcmp(a, b, sizeof(a)));
+// 	// }
 
 // 	return (0);
 // }

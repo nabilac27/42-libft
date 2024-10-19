@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:36:08 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/16 19:43:39 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/18 21:24:17 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 	It sets a block of memory to a specific value
 
 	It is often utilized for initializing or resetting memory areas,
-	such as arrays or structures, to a known state.
+	such as arrays or structures, to a known state
 */
 
 #include "libft.h"
@@ -57,7 +57,7 @@ void	*ft_memset(void *ptr, int value, size_t num)
 // 	return (0);
 // }
 
-/* 
+/*
 	void* is a Generic Pointer Type:
 	It can point to any data type, but it does not have a specific data type
 	associated with it.

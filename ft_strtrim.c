@@ -6,12 +6,14 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:22:04 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/17 17:40:44 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/18 19:38:27 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* trims the beginning and end of string
-	with specific set of chars. */
+/*
+	trims the beginning and end of string
+	with specific set of chars.
+*/
 
 #include "libft.h"
 
@@ -31,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		while (s1[j - 1] && ft_strchr(set, s1[j - 1]) && j > i)
 			j--;
 		str = (char *)malloc(sizeof(char) * (j - i + 1));
-		if (str)
+		if (str != 0)
 			ft_strlcpy(str, &s1[i], j - i + 1);
 	}
 	return (str);
@@ -39,7 +41,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int	main(void)
 // {
-// 	printf("%s\n", ft_strtrim("abqbc", "abc"));
-// 	printf("%s\n", ft_strtrim("xhelloyz", "xyz"));
-// 	printf("%s\n", ft_strtrim("asd123das", "ads"));
+// 	printf("%s\n", ft_strtrim("hello world", "world"));
 // }

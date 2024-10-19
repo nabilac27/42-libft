@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:12:55 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/10 20:04:28 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/18 23:21:24 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,48 +17,45 @@
 
 #include "libft.h"
 
-char	*ft_strchr(const char *pString, int pFind)
+char	*ft_strchr(const char *ptr_string, int ptr_find)
 {
-	while (*pString != '\0')
+	int	i;
+
+	i = 0;
+	while (ptr_string[i] != '\0')
 	{
-		if (*pString == (char)pFind)
-		{
-			return ((char *)pString);
-		}
-		pString++;
+		if (ptr_string[i] == (char)ptr_find)
+			return ((char *)&ptr_string[i]);
+		i++;
 	}
-	if (pFind == '\0')
-	{
-		return ((char *)pString);
-	}
+	if (ptr_find == '\0')
+		return ((char *)&ptr_string[i]);
 	return (0);
 }
 
-// int main(void)
+// int	main(void)
 // {
-//     char string[] = "This is a string";
-//     char find = 'i';    // Input
+// 	char	string[] = "This is a string";
+// 	char	*result_strchr;
+// 	char	*result_ft_strchr;
 
-//     char *result_strchr     = strchr(string, find);
-//     char *result_ft_strchr  = ft_strchr(string, find);
+// 	char find = 'i'; // Input
 
-//     if (result_strchr != 0)
-//     {
-//         printf("strchr    = %s\n", result_strchr);
-//     }
-//     else
-//     {
-//         printf("strchr    = character not found\n");
-//     }
+// 	printf("String	  = %s\n", string);
+// 	printf("To find   = %c\n", find);
+// 	printf("---------------------------\n");
 
-//     if (result_ft_strchr != 0)
-//     {
-//         printf("ft_strchr = %s\n", result_ft_strchr);
-//     }
-//     else
-//     {
-//         printf("ft_strchr = character not found\n");
-//     }
+// 	result_strchr = strchr(string, find);
+// 	if (result_strchr != 0)
+// 		printf("strchr    = %s\n", result_strchr);
+// 	else
+// 		printf("strchr    = character not found\n");
 
-//     return(0);
+// 	result_ft_strchr = ft_strchr(string, find);
+// 	if (result_ft_strchr != 0)
+// 		printf("ft_strchr = %s\n", result_ft_strchr);
+// 	else
+// 		printf("ft_strchr = character not found\n\n");
+
+// 	return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 21:33:52 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/10 22:30:53 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/18 18:21:10 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *restrict dest, const char *src, size_t n)
+size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
 	size_t	i;
 	size_t	j;

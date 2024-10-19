@@ -6,17 +6,13 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 21:29:24 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/17 18:48:31 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/19 04:45:01 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 	memmove is a function from <string.h>
-	memmove stands for "memory move"
-
-	It moves a block of memory from one location to another,
-	with special handling to ensure that the operation is safe
-	even if the source and destination memory regions overlap
+	It moves a block of memory from one location to another
 */
 
 #include "libft.h"
@@ -29,18 +25,12 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 	ptr_dest = (unsigned char *)dest;
 	ptr_src = (const unsigned char *)src;
-	if (!dest || !src)
-	{
+	if (!dest && !src)
 		return (0);
-	}
 	if (ptr_dest > ptr_src)
 	{
-		i = len;
-		while (i > 0)
-		{
-			i--;
-			ptr_dest[i] = ptr_src[i];
-		}
+		while (len--)
+			ptr_dest[len] = ptr_src[len];
 	}
 	else
 	{
@@ -51,37 +41,23 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 			i++;
 		}
 	}
-	return (ptr_dest);
+	return (dest);
 }
 
 // int	main(void)
 // {
-// 	char str[50] 	= "Hello, World!";
-// 	size_t len_str  = strlen(str);
+// 	char	src[50] = "HelloTest";
+// 	char	*dest	= src;
 
-// 	printf("Input		: %s\n", str);
-// 	printf("-------------------------------\n");
+// 	size_t	len_str = 3;
 
-// 	// Overlapping memory regions
-// 	ft_memmove(str + 7, str, len_str);
-// 	printf("ft_memmove	: %s\n", str);
+// 	ft_memmove(dest, src, len_str);
+// 	printf("ft_memmove	: %s\n\n", src);
 
-// 	// Reset the string for the next demonstration
-//     strcpy(str, "Hello, World!"); // Restore the original string
+// 	strcpy(src, "HelloTest"); // Restore the original string
 
-// 	memmove(str + 7, str, len_str);
-// 	printf("memmove		: %s\n", str);
+// 	memmove(dest, src, len_str);
+// 	printf("memmove		: %s\n", src);
 
 // 	return (0);
 // }
-
-/*
-	The difference between memmove and memcpy
-
-	memmove:
-		Safely handles overlapping memory regions
-
-	memcpy:
-		Does not handle overlaps safely, which can lead to data corruption
-
-*/

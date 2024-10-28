@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 22:52:43 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 19:43:06 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/28 14:40:46 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:43:17 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	ptr_malloc = malloc(count * size);
 	if (ptr_malloc == 0)
-	{
 		return (0);
-	}
-	ft_bzero(ptr_malloc, count * size);
+	ft_bzero(ptr_malloc, (count * size));
 	return (ptr_malloc);
 }
 

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 21:03:53 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 00:25:23 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/22 22:42:44 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:42:40 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,12 @@
 
 #include "libft.h"
 
-void	ft_bzero(void *ptr, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	char	*string;
-	size_t	i;
+	char	*ptr_s;
 
-	string = (char *)ptr;
-	i = 0;
-	while (i < n)
-	{
-		string[i] = 0;
-		i++;
-	}
+	ptr_s = (char *)s;
+	ft_memset(ptr_s, 0, n);
 }
 
 // int	main(void)

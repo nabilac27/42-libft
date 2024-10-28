@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 22:14:54 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 05:16:05 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/23 19:46:49 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:52:01 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,48 +15,27 @@
 	It searches for the last occurrence of a character in a string
 */
 
-// char	*ft_strrchr(const char *ptr_string, int ptr_find)
-// {
-// 	int		i;
-// 	char	*last;
-
-// 	i = 0;
-// 	last = 0;
-// 	while (ptr_string[i] != '\0')
-// 	{
-// 		if (ptr_string[i] == (char)ptr_find)
-// 			last = (char *)&ptr_string[i];
-// 		i++;
-// 	}
-// 	if (ptr_find == '\0')
-// 		return ((char *)&ptr_string[i]);
-// 	return (last);
-// }
-
 #include "libft.h"
 
-char	*ft_strrchr(const char *ptr_string, int ptr_find)
+char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
-	int		last;
-	char	c2;
+	int	len;
 
-	i = 0;
-	last = -1;
-	c2 = (char)ptr_find;
-	while (ptr_string[i] != '\0')
+	len = ft_strlen(s);
+	while (len >= 0)
 	{
-		if (ptr_string[i] == c2)
-			last = i;
-		i++;
+		if (s[len] == (char)c)
+		{
+			return ((char *)&s[len]);
+		}
+		len--;
 	}
-	if (c2 == '\0')
-		return ((char *)&ptr_string[i]);
-	if (last != -1)
-		return ((char *)&ptr_string[last]);
-	return (NULL);
+	if (c == '\0')
+	{
+		return ((char *)&s[len]);
+	}
+	return (0);
 }
-
 // int	main(void)
 // {
 // 	char	string[] = "This is a string";

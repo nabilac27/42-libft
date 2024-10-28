@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 20:36:08 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 19:45:25 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/22 19:57:57 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:48:25 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,19 @@
 
 #include "libft.h"
 
-void	*ft_memset(void *ptr, int value, size_t num)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	char	*string;
+	char	*ptr_b;
 	size_t	i;
 
-	string = (char *)ptr;
 	i = 0;
-	while (i < num)
+	ptr_b = b;
+	while (i < len)
 	{
-		string[i] = value;
+		ptr_b[i] = (unsigned char)c;
 		i++;
 	}
-	return (ptr);
+	return (b);
 }
 
 // int	main(void)
@@ -64,7 +64,7 @@ void	*ft_memset(void *ptr, int value, size_t num)
 // 	associated with it
 
 // 	a void* can't be dereferenced
-// 	or perform pointer arithmetic on it 
+// 	or perform pointer arithmetic on it
 // 	because the compiler does not know
 // 	what type of data it points to
 
@@ -72,7 +72,7 @@ void	*ft_memset(void *ptr, int value, size_t num)
 // 	we need to treat the memory as an array of bytes
 
 // 	In C, a char is defined to be exactly one byte,
-// 	casting the void* pointer to a char* allows us 
+// 	casting the void* pointer to a char* allows us
 // 	to access and modify individual bytes
 
 // 	Dereferencing:

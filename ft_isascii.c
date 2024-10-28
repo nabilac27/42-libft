@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 12:31:13 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/10 20:03:58 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/22 19:34:17 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:44:54 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,13 @@
 	It encodes 128 specified characters into 7-bit integers
 */
 
-#include "libft.h"
-
-int	ft_isascii(int i)
+int	ft_isascii(int c)
 {
-	if (i >= 0 && i <= 127)
+	if (0 <= c && c <= 127)
 	{
 		return (1);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
 
 // int	main(void)

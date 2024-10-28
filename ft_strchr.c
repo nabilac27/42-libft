@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 22:12:55 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 05:22:41 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/23 19:18:02 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:48:51 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,23 @@
 
 #include "libft.h"
 
-char	*ft_strchr(const char *ptr_string, int ptr_find)
+char	*ft_strchr(const char *s, int c)
 {
-	int		i;
-	char	char_ptr_find;
+	int	i;
 
 	i = 0;
-	char_ptr_find = (char)ptr_find;
-	while (ptr_string[i] != '\0' || ptr_string[i] == char_ptr_find)
+	while (s[i] != '\0')
 	{
-		if (ptr_string[i] == char_ptr_find)
+		if (s[i] == (char)c)
 		{
-			return ((char *)&ptr_string[i]);
+			return ((char *)&s[i]);
 		}
 		i++;
 	}
-	if (char_ptr_find == '\0')
-		return ((char *)&ptr_string[i]);
+	if (c == '\0')
+	{
+		return ((char *)&s[i]);
+	}
 	return (0);
 }
 

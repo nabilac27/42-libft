@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 12:35:02 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/10 20:04:23 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/22 19:38:20 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:45:47 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,13 @@
 		Include letters, digits, punctuation marks, and special symbols
 */
 
-#include "libft.h"
-
-int	ft_isprint(int i)
+int	ft_isprint(int c)
 {
-	if (i >= 32 && i <= 126)
+	if (32 <= c && c <= 126)
 	{
 		return (1);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
 
 // int	main(void)

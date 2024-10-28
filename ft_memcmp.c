@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 22:34:51 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 20:56:11 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/23 22:39:56 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:47:14 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,19 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	*str1;
-	char	*str2;
+	char	*ptr_s1;
+	char	*ptr_s2;
 	size_t	i;
 
-	str1 = (char *)s1;
-	str2 = (char *)s2;
+	ptr_s1 = (char *)s1;
+	ptr_s2 = (char *)s2;
 	i = 0;
 	while (i < n)
 	{
-		if (str1[i] != str2[i])
-			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		if (ptr_s1[i] != ptr_s2[i])
+		{
+			return ((unsigned char)ptr_s1[i] - (unsigned char)ptr_s2[i]);
+		}
 		i++;
 	}
 	return (0);

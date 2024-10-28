@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 12:20:41 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/17 16:07:21 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/22 19:30:18 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:43:49 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,14 @@
 	alphanumeric = contains letters (a-z, A-Z, 0-9) and numbers
 */
 
-#include "libft.h"
-
-int	ft_isalnum(int i)
+int	ft_isalnum(int c)
 {
-	if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z') || (i >= '0'
-			&& i <= '9'))
+	if (('0' <= c && c <= '9') || ('a' <= c && c <= 'z') || ('A' <= c
+			&& c <= 'Z'))
 	{
 		return (1);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
 
 // int	main(void)

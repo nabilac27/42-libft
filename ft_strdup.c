@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 22:39:01 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 19:45:41 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/28 19:33:39 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:49:10 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strdup(const char *s1)
 {
-	char	*dest;
+	char	*ptr_malloc;
 
-	dest = malloc(ft_strlen(src) + 1);
-	if (dest == 0)
+	ptr_malloc = malloc(ft_strlen(s1) + 1);
+	if (ptr_malloc == 0)
 		return (0);
-	ft_memcpy(dest, src, ft_strlen(src) + 1);
-	return (dest);
+	ft_strlcpy(ptr_malloc, s1, ft_strlen(s1) + 1);
+	return (ptr_malloc);
 }
 
 // int	main(void)

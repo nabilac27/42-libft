@@ -5,28 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 12:15:38 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/10 20:04:18 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/22 19:28:06 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:45:23 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	isalpha is a function from <ctype.h>
+	isdigit is a function from <ctype.h>
 	It checks if a character is a digit
 */
 
-#include "libft.h"
-
-int	ft_isdigit(int i)
+int	ft_isdigit(int c)
 {
-	if ('0' <= i && i <= '9')
+	if ('0' <= c && c <= '9')
 	{
 		return (1);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
 
 // int	main(void)

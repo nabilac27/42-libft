@@ -6,7 +6,7 @@
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:15:29 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/10 20:03:53 by nchairun         ###   ########.fr       */
+/*   Updated: 2024/10/28 19:44:26 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 #include "libft.h"
 
-int	ft_isalpha(int i)
+int	ft_isalpha(int c)
 {
-	if (('a' <= i && i <= 'z') || ('A' <= i && i <= 'Z'))
+	if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
 	{
 		return (1);
 	}

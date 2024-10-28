@@ -5,34 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 22:20:26 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 00:33:31 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/23 22:03:15 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:46:38 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 	memchr is a function from <string.h>
-
-	It finds the first occurrence of a byte in a memory block
-
+	
 	It locates the first occurrence of a specific character
 	in a block of memory
 */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *ptr_src, int ptr_find, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*str;
+	char	*ptr_s;
 	size_t	i;
 
-	str = (char *)ptr_src;
+	ptr_s = (char *)s;
 	i = 0;
 	while (i < n)
 	{
-		if ((unsigned char)str[i] == (unsigned char)ptr_find)
+		if ((unsigned char)ptr_s[i] == (unsigned char)c)
 		{
-			return ((char *)&str[i]);
+			return ((char *)&ptr_s[i]);
 		}
 		i++;
 	}

@@ -5,20 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 17:19:39 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 19:46:26 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/28 20:00:08 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 20:40:41 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*
+	Allocates (with malloc(3)) and returns a substring from the string ’s’
+	The substring begins at index ’start’ and is of maximum size ’len’
+*/
 
-/* returns a substring from a string */
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	char	*result;
+	char	*ptr_malloc;
 
 	i = 0;
 	j = start;
@@ -26,17 +29,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	if (ft_strlen(s) < start)
 		return (ft_strdup(""));
-	if (len > (ft_strlen(s) - start))
+	if ((ft_strlen(s) - start) < len)
 		len = ft_strlen(s) - start;
-	result = (char *)malloc(sizeof(char) * (len + 1));
-	if (result == 0)
+	ptr_malloc = (char *)malloc(len + 1);
+	if (ptr_malloc == 0)
 		return (0);
 	while (i < len && s[j] != '\0')
 	{
-		result[i++] = s[j++];
+		ptr_malloc[i] = s[j];
+		i++;
+		j++;
 	}
-	result[i] = '\0';
-	return (result);
+	ptr_malloc[i] = '\0';
+	return (ptr_malloc);
 }
 
 // int	main(void)

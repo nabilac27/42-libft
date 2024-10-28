@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 12:46:21 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 20:22:39 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/22 19:51:04 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:52:49 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,13 @@
 	values of lowercase and uppercase
 */
 
-#include "libft.h"
-
-int	ft_toupper(int i)
+int	ft_toupper(int c)
 {
-	if (i >= 'a' && i <= 'z')
+	if ('a' <= c && c <= 'z')
 	{
-		return (i - 32);
+		return (c - 32);
 	}
-	else
-	{
-		return (i);
-	}
+	return (c);
 }
 
 // int	main(void)

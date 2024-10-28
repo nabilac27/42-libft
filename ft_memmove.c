@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchairun <nchairun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 21:29:24 by nchairun          #+#    #+#             */
-/*   Updated: 2024/10/19 04:45:01 by nchairun         ###   ########.fr       */
+/*   Created: 2024/10/23 22:55:38 by nchairun          #+#    #+#             */
+/*   Updated: 2024/10/28 19:47:55 by nchairun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,31 +17,29 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char		*ptr_dest;
-	const unsigned char	*ptr_src;
-	size_t				i;
+	char	*ptr_dst;
+	char	*ptr_src;
+	size_t	i;
 
-	ptr_dest = (unsigned char *)dest;
-	ptr_src = (const unsigned char *)src;
-	if (!dest && !src)
+	ptr_dst = (char *)dst;
+	ptr_src = (char *)src;
+	i = 0;
+	if (!dst && !src)
 		return (0);
-	if (ptr_dest > ptr_src)
-	{
+	if (ptr_dst > ptr_src)
 		while (len--)
-			ptr_dest[len] = ptr_src[len];
-	}
+			ptr_dst[len] = ptr_src[len];
 	else
 	{
-		i = 0;
 		while (i < len)
 		{
-			ptr_dest[i] = ptr_src[i];
+			ptr_dst[i] = ptr_src[i];
 			i++;
 		}
 	}
-	return (dest);
+	return (dst);
 }
 
 // int	main(void)

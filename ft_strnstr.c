@@ -48,7 +48,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // int	main(void)
 // {
 // 	char str[]		= "aBCd";
-// 	char substr[] 	= "BCdE";
+// 	char substr[] 		= "BCd";
 // 	size_t n 		= 25;
 
 // 	char *result_ft_strnstr = ft_strnstr(str, substr, n);

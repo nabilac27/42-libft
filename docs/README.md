@@ -14,7 +14,7 @@ acting as a core building block for many **42** projects.
 This project is designed to help strengthen understanding of C programming, 
 focusing on low-level memory manipulation, pointer management, and efficient coding practices.
 
-### **Libc Functions**
+### **Libc Functions `<ctype.h>`**
 
 | **Function** | **Description** |
 |--------------|-----------------|

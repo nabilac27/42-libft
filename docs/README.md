@@ -1,4 +1,4 @@
-## **libft**
+# **libft**
 
 This repository contains my implementation of the **42 Libft** project, 
 a custom C library that replicates essential standard C library functions. 
@@ -6,7 +6,7 @@ a custom C library that replicates essential standard C library functions.
 It includes fundamental utilities for memory management, string manipulation, and more, 
 acting as a core building block for many **42** projects.
 
-### **Key Features**:
+## **Key Features**:
 - **Memory Management**: Functions such as `malloc`, `free`, and `calloc` for dynamic memory handling.
 - **String Manipulation**: Key string functions like `strlen`, `strcpy`, `strcmp`, etc.
 - **Utility Functions**: Various helper functions for a wide range of operations.
@@ -16,7 +16,7 @@ focusing on low-level memory manipulation, pointer management, and efficient cod
 
 ---
 
-### **Functions Overview**
+## **Functions Overview**
 ### **Libc Functions `<ctype.h>`**
 
 | **Function** | **Description** |
@@ -74,13 +74,13 @@ focusing on low-level memory manipulation, pointer management, and efficient cod
 
 ---
 
-## **libft_v2** - Enhanced Version
+# **libft_v2** - Enhanced Version
 
 This repository contains my **enhanced version of Libft**, 
 which builds on the original **42 Libft** by adding extra utilities and functionalities 
 tailored to the more complex requirements of **42 projects**.
 
-### **Key Additions**:
+## **Key Additions**:
 - **`ft_printf`**: A custom implementation of the `printf` function for formatted output.
 - **`get_next_line`**: A function to read lines from a file descriptor efficiently.
 

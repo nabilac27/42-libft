@@ -1,5 +1,9 @@
 libft
-This repository contains my implementation of the 42 Libft project, a custom C library that replicates essential standard C library functions. It includes basic functions for memory management, string manipulation, and other utilities, serving as a fundamental building block for many 42 projects.
+This repository contains my implementation of the 42 Libft project, 
+a custom C library that replicates essential standard C library functions. 
+
+It includes basic functions for memory management, string manipulation, 
+and other utilities, serving as a fundamental building block for many 42 projects.
 
 libft_v2 - Enhanced Version
 This repository contains my enhanced version of Libft,

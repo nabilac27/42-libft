@@ -74,7 +74,7 @@ focusing on low-level memory manipulation, pointer management, and efficient cod
 
 ---
 
-# **libft_v2** - Enhanced Version
+## **libft_v2** - Enhanced Version
 
 This repository contains my **enhanced version of Libft**, 
 which builds on the original **42 Libft** by adding extra utilities and functionalities 

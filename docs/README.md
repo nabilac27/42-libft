@@ -84,6 +84,3 @@ tailored to the more complex requirements of **42 projects**.
 - **`ft_printf`**: A custom implementation of the `printf` function for formatted output.
 - **`get_next_line`**: A function to read lines from a file descriptor efficiently.
 
-This version of **Libft** serves as a more comprehensive and optimized library, 
-providing reusable and high-performance code for various **42** projects.
-

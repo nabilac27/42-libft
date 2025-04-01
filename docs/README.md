@@ -1,4 +1,4 @@
-### **libft** - Standard Implementation
+### **libft**
 
 This repository contains my implementation of the **42 Libft** project, 
 a custom C library that replicates essential standard C library functions. 

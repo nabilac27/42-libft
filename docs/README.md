@@ -6,7 +6,7 @@ a custom C library that replicates essential standard C library functions.
 It includes fundamental utilities for memory management, string manipulation, and more, 
 acting as a core building block for many **42** projects.
 
-#### **Key Features**:
+### **Key Features**:
 - **Memory Management**: Functions such as `malloc`, `free`, and `calloc` for dynamic memory handling.
 - **String Manipulation**: Key string functions like `strlen`, `strcpy`, `strcmp`, etc.
 - **Utility Functions**: Various helper functions for a wide range of operations.
@@ -14,7 +14,10 @@ acting as a core building block for many **42** projects.
 This project is designed to help strengthen understanding of C programming, 
 focusing on low-level memory manipulation, pointer management, and efficient coding practices.
 
-#### **Libc Functions `<ctype.h>`**
+---
+
+### **Functions Overview**
+### **Libc Functions `<ctype.h>`**
 
 | **Function** | **Description** |
 |--------------|-----------------|
@@ -26,7 +29,7 @@ focusing on low-level memory manipulation, pointer management, and efficient cod
 | `ft_toupper(int i)` | Converts a lowercase letter to uppercase. |
 | `ft_tolower(int i)` | Converts an uppercase letter to lowercase. |
 
-#### **Libc Functions: `<string.h>`**
+### **Libc Functions: `<string.h>`**
 
 | **Function** | **Description** |
 |--------------|-----------------|
@@ -45,14 +48,14 @@ focusing on low-level memory manipulation, pointer management, and efficient cod
 | `ft_strnstr(const char *haystack, const char *needle, size_t len)` | Finds the first occurrence of `needle` in `haystack`, within `len` characters. |
 | `ft_strdup(const char *s1)` | Duplicates the string `s1`, allocating memory for the new string. |
 
-#### **Libc Functions: `<stdlib.h>`**
+### **Libc Functions: `<stdlib.h>`**
 
 | **Function** | **Description** |
 |--------------|-----------------|
 | `ft_atoi(const char *str)` | Converts the string `str` to an integer. |
 | `ft_calloc(size_t count, size_t size)` | Allocates memory for `count` elements, each of size `size`, and initializes it to zero. |
 
-#### **Additional Functions**
+### **Additional Functions**
 
 | **Function** | **Description** |
 |--------------|-----------------|
@@ -77,7 +80,7 @@ This repository contains my **enhanced version of Libft**,
 which builds on the original **42 Libft** by adding extra utilities and functionalities 
 tailored to the more complex requirements of **42 projects**.
 
-#### **Key Additions**:
+### **Key Additions**:
 - **`ft_printf`**: A custom implementation of the `printf` function for formatted output.
 - **`get_next_line`**: A function to read lines from a file descriptor efficiently.
 

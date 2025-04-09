@@ -17,7 +17,7 @@
 */
 
 #include "libft.h"
-#include <stdlib.h> // Add this line
+#include <stdlib.h> 
 
 static void	free_str(char **str);
 static int	count_str(char const *str, char c);
